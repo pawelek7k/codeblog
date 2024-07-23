@@ -1,11 +1,8 @@
+import { PostProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
-interface ItemProps {
-  post: Post[];
-}
-
-export const PostItem = ({ post }: ItemProps) => {
+export const PostItem = ({ post }: PostProps) => {
   const { title, image, excerpt, date, slug } = post;
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     day: "numeric",
@@ -14,20 +11,19 @@ export const PostItem = ({ post }: ItemProps) => {
   });
 
   const imagePath = `/images/posts/${slug}/${image}`;
+  const linkPath = `/posts/${slug}`;
 
   return (
     <li>
-      <Link href={slug}>
-        <a href="">
-          <div>
-            <Image src={imagePath} alt={title} width={300} height={200} />
-          </div>
-          <div>
-            <h3>{title}</h3>
-            <time>{formattedDate}</time>
-            <p>{excerpt}</p>
-          </div>
-        </a>
+      <Link href={linkPath}>
+        <div>
+          <Image src={imagePath} alt={title} width={300} height={200} />
+        </div>
+        <div>
+          <h3>{title}</h3>
+          <time>{formattedDate}</time>
+          <p>{excerpt}</p>
+        </div>
       </Link>
     </li>
   );

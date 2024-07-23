@@ -1,6 +1,11 @@
+import { PostProps } from "../../types";
 import { PostItem } from "./PostItem";
 
-export const PostsGrid = ({ posts }: { posts: Post[] }) => {
+interface FeaturedPostsProps {
+  posts: PostProps[];
+}
+
+export const PostsGrid = ({ posts }: FeaturedPostsProps) => {
   return (
     <ul>
       {posts.map((post) => (
