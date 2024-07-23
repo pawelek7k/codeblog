@@ -1,6 +1,7 @@
+import { PostProps } from "@/types";
 import Image from "next/image";
 
-export const PostHeader = ({ title, image }) => {
+export const PostHeader = ({ title, image }: PostProps) => {
   return (
     <header>
       <h1>{title}</h1>
