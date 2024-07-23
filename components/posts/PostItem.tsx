@@ -17,7 +17,13 @@ export const PostItem = ({ post }: PostProps) => {
     <li>
       <Link href={linkPath}>
         <div>
-          <Image src={imagePath} alt={title} width={300} height={200} />
+          <Image
+            src={imagePath}
+            alt={title}
+            width={300}
+            height={200}
+            layout="responsive"
+          />
         </div>
         <div>
           <h3>{title}</h3>
