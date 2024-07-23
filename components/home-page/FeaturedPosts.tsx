@@ -1,3 +1,7 @@
 export const FeaturedPosts = () => {
-  return <h1>ok</h1>;
+  return (
+    <section>
+      <h2>Featured Posts</h2>
+    </section>
+  );
 };
