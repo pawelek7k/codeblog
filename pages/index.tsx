@@ -1,7 +1,7 @@
 import { FeaturedPosts } from "@/components/home-page/FeaturedPosts";
 import { Hero } from "@/components/home-page/Hero";
 
-const POSTS = [
+export const POSTS = [
   {
     title: "Understanding TypeScript",
     slug: "understanding-typescript",
