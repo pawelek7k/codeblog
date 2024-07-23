@@ -2,14 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface ItemProps {
-  title: string;
-  image: string;
-  excerpt: string;
-  date: string;
-  slug: string;
+  post: Post[];
 }
 
-export const PostItem = ({ title, image, excerpt, date, slug }: ItemProps) => {
+export const PostItem = ({ post }: ItemProps) => {
+  const { title, image, excerpt, date, slug } = post;
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     day: "numeric",
     month: "long",
