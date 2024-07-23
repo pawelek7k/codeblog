@@ -15,12 +15,15 @@ export const PostItem = ({ title, image, excerpt, date, slug }: ItemProps) => {
     month: "long",
     year: "numeric",
   });
+
+  const imagePath = `/images/posts/${slug}/${image}`;
+
   return (
     <li>
       <Link href={slug}>
         <a href="">
           <div>
-            <Image src={image} alt={title} />
+            <Image src={imagePath} alt={title} width={300} height={200} />
           </div>
           <div>
             <h3>{title}</h3>
