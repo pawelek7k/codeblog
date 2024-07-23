@@ -15,7 +15,7 @@ export const PostContent = () => {
   return (
     <article>
       <PostHeader title={POST.title} image={imagePath} />
-      CONTENT
+      {POST.content}
     </article>
   );
 };
