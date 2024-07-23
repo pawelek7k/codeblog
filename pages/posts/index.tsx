@@ -1,4 +1,4 @@
-import AllPosts from "../allPosts";
+import AllPosts from "../AllPosts";
 
 const AllPostPage = () => {
   return <AllPosts />;
