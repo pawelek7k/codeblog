@@ -10,7 +10,7 @@ export const PostItem = ({ post }: PostProps) => {
     year: "numeric",
   });
 
-  const imagePath = `/images/posts/${image}`;
+  const imagePath = `/images/posts/${slug}/${image}`;
   const linkPath = `/posts/${slug}`;
 
   return (
