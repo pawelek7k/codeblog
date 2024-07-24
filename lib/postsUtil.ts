@@ -29,18 +29,18 @@ const getPostData = (fileName: string): PostData => {
 }
 
 export const getAllPosts = (): PostData[] => {
-    const postFiles = fs.readdirSync(postsDirectory)
+    const postFiles = fs.readdirSync(postsDirectory);
 
     const allPosts = postFiles.map(postFile => {
-        return getPostData(postFile)
-    })
+        return getPostData(postFile);
+    });
 
     const sortedPosts = allPosts.sort((A, B) => {
-        return A.date > B.date ? -1 : 1
-    })
+        return A.date > B.date ? -1 : 1;
+    });
 
-    return sortedPosts
-}
+    return sortedPosts;
+};
 
 export const getFeaturedPosts = (): PostData[] => {
     const allPosts = getAllPosts()
