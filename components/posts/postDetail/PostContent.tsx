@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import { PostHeader } from "./PostHeader";
 
 const POST = {
@@ -15,7 +16,7 @@ export const PostContent = () => {
   return (
     <article>
       <PostHeader title={POST.title} image={imagePath} />
-      {POST.content}
+      <ReactMarkdown>{POST.content}</ReactMarkdown>
     </article>
   );
 };
