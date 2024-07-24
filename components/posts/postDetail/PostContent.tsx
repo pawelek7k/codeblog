@@ -12,7 +12,7 @@ const POST = {
 };
 
 export const PostContent = () => {
-  const imagePath = `/images/posts/${POST.image}`;
+  const imagePath = `/images/posts/${POST.slug}/${POST.image}`;
   return (
     <article>
       <PostHeader title={POST.title} image={imagePath} />
