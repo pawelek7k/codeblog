@@ -13,6 +13,7 @@ const config: Config = {
       primary: '#b291d5',
       secondary: '#742c5d',
       accent: '#c05b7f',
+      secondaryBg: 'rgba(26, 17, 41, 0.5)'
     },
     extend: {
       backgroundImage: {
