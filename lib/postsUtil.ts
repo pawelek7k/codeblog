@@ -24,8 +24,6 @@ export const getPostData = (id: string): PostData => {
     const fileContent = fs.readFileSync(filePath, 'utf-8')
     const { data, content } = matter(fileContent)
 
-    console.log('Data from Markdown:', data);
-
 
     const postData: PostData = {
         slug: postSlug,
