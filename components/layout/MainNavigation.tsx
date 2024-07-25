@@ -3,7 +3,7 @@ import { Logo } from "./Logo";
 
 export const MainNavigation = () => {
   return (
-    <header className="flex justify-evenly">
+    <header className="flex justify-evenly p-4">
       <Link href="/">
         <Logo />
       </Link>
