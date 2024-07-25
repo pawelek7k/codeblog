@@ -10,7 +10,7 @@ interface PostData {
     content: string;
 }
 
-export const getPostsFiles = () => {
+export const getPostsFiles = (): string[] => {
     return fs.readdirSync(postsDirectory);
 }
 
@@ -25,9 +25,9 @@ export const getPostData = (id: string): PostData => {
 
     const postData: PostData = {
         slug: postSlug,
-        title: data.title,
-        date: data.date,
-        isFeatured: data.isFeatured,
+        title: data.title as string,
+        date: data.date as string,
+        isFeatured: data.isFeatured as boolean,
         content
     }
     return postData
