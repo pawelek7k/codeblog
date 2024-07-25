@@ -1,4 +1,4 @@
-import { getFeaturedPosts } from "@/lib/postsUtil";
+import { getAllPosts } from "@/lib/postsUtil";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import AllPosts from "../AllPosts";
 
@@ -9,7 +9,7 @@ const AllPostPage: React.FC<AllPostsProps> = (props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPosts = getFeaturedPosts();
+  const allPosts = getAllPosts();
 
   return {
     props: {
