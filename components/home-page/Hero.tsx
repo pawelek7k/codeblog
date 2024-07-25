@@ -7,7 +7,9 @@ export const Hero = () => {
           <li className="bg-secondary w-4 h-4 rounded-full"></li>
           <li className="bg-accent w-4 h-4 rounded-full"></li>
         </ul>
-        <h1 className="text-5xl text-center mt-24">Programming blog</h1>
+        <h1 className="text-2xl text-center mt-24 md:text-4xl">
+          Programming blog
+        </h1>
       </div>
     </section>
   );
