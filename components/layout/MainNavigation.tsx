@@ -9,7 +9,7 @@ export const MainNavigation = () => {
       </Link>
 
       <nav>
-        <ul className="flex gap-8">
+        <ul className="flex gap-8 tracking-widest">
           <li>
             <Link href="/posts">Posts</Link>
           </li>
