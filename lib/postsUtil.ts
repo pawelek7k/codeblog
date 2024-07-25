@@ -6,6 +6,8 @@ interface PostData {
     slug: string;
     title: string;
     date: string;
+    image: string
+    excerpt: string
     isFeatured: boolean;
     content: string;
 }
@@ -22,11 +24,15 @@ export const getPostData = (id: string): PostData => {
     const fileContent = fs.readFileSync(filePath, 'utf-8')
     const { data, content } = matter(fileContent)
 
+    console.log('Data from Markdown:', data);
+
 
     const postData: PostData = {
         slug: postSlug,
         title: data.title as string,
         date: data.date as string,
+        image: data.image as string,
+        excerpt: data.excerpt as string,
         isFeatured: data.isFeatured as boolean,
         content
     }
