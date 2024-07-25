@@ -1,8 +1,11 @@
 import { FeaturedPosts } from "@/components/home-page/FeaturedPosts";
 import { Hero } from "@/components/home-page/Hero";
 import { getFeaturedPosts } from "@/lib/postsUtil";
+import { InferGetStaticPropsType } from "next";
 
-const HomePage = (props) => {
+type AllPostsProps = InferGetStaticPropsType<typeof getStaticProps>;
+
+const HomePage: React.FC<AllPostsProps> = (props) => {
   return (
     <>
       <Hero />
