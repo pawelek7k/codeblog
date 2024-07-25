@@ -1,13 +1,16 @@
 import { PostContent } from "@/components/posts/postDetail/PostContent";
 import { getPostData, getPostsFiles } from "@/lib/postsUtil";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
 
-const SinglePostPage = (props) => {
+type SinglePostPageProps = InferGetStaticPropsType<typeof getStaticProps>;
+
+const SinglePostPage: React.FC<SinglePostPageProps> = (props) => {
   return <PostContent post={props.post} />;
 };
 
-export const getStaticProps = (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   const { params } = context;
-  const { slug } = params;
+  const { slug } = params as { slug: string };
 
   const postData = getPostData(slug);
 
