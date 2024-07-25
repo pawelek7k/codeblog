@@ -1,3 +1,7 @@
 export const Hero = () => {
-  return <section>Hero section</section>;
+  return (
+    <section className="bg-hero-bg bg-fixed bg-center bg-no-repeat bg-cover h-screen">
+      Hero section
+    </section>
+  );
 };
