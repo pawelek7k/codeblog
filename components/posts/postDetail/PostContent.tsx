@@ -1,7 +1,12 @@
+import { PostProps } from "@/types";
 import ReactMarkdown from "react-markdown";
 import { PostHeader } from "./PostHeader";
 
-export const PostContent = ({ post }) => {
+interface PostContentProps {
+  post: PostProps;
+}
+
+export const PostContent = ({ post }: PostContentProps) => {
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
   return (
     <article>

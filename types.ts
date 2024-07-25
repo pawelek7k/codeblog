@@ -4,4 +4,5 @@ export interface PostProps {
     image: string;
     excerpt: string;
     date: string;
+    content?: string
 }
