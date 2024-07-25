@@ -1,5 +1,5 @@
 import { PostProps } from "@/types";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 export const PostItem = ({ post }: PostProps) => {
@@ -16,7 +16,7 @@ export const PostItem = ({ post }: PostProps) => {
   return (
     <li>
       <Link href={linkPath}>
-        <div>
+        <div className="w-[10rem]">
           <Image
             src={imagePath}
             alt={title}

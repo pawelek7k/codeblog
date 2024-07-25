@@ -1,3 +1,3 @@
 export const Logo = () => {
-  return <h1>CD - CodeBlog</h1>;
+  return <h1>{"</> CodeBlog"}</h1>;
 };

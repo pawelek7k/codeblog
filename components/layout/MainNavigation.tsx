@@ -3,13 +3,13 @@ import { Logo } from "./Logo";
 
 export const MainNavigation = () => {
   return (
-    <header>
+    <header className="flex justify-evenly">
       <Link href="/">
         <Logo />
       </Link>
 
       <nav>
-        <ul>
+        <ul className="flex gap-8">
           <li>
             <Link href="/posts">Posts</Link>
           </li>
