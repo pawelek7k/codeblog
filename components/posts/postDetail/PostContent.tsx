@@ -4,7 +4,7 @@ import { PostHeader } from "./PostHeader";
 const POST = {
   title: "Understanding TypeScript",
   slug: "understanding-typescript",
-  image: "typescript.png",
+  image: "understanding-typescript.jpg",
   excerpt:
     "Learn the basics of TypeScript and how it improves JavaScript development.",
   date: "2024-06-15",
