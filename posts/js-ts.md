@@ -1,7 +1,7 @@
 ---
 title: "Comparing JavaScript and TypeScript"
 date: "2024-07-26"
-image: "javascript-typescript-comparison.jpg"
+image: "js-ts.png"
 excerpt: "Learn how JavaScript and TypeScript differ from each other and why TypeScript might be a better choice for your project."
 isFeatured: true
 ---
