@@ -14,7 +14,7 @@ export const PostItem = ({ post }: PostProps) => {
   const linkPath = `/posts/${slug}`;
 
   return (
-    <li className="w-[14rem]">
+    <li className="w-[20rem]">
       <Link href={linkPath}>
         <div>
           <Image
@@ -23,10 +23,11 @@ export const PostItem = ({ post }: PostProps) => {
             width={300}
             height={200}
             layout="responsive"
+            className="rounded-t-lg"
           />
         </div>
-        <div>
-          <h3 className="text-base mt-24 md:text-lg text-center"> {title}</h3>
+        <div className="flex flex-col gap-2">
+          <h3 className="text-base md:text-lg "> {title}</h3>
           <time>{formattedDate}</time>
           <p>{excerpt}</p>
         </div>
