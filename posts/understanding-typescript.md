@@ -7,3 +7,5 @@ isFeatured: true
 ---
 
 # Understanding TypeScript
+
+![JavaScript vs TypeScript](typescript-javascript.png)
