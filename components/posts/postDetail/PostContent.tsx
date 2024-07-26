@@ -12,10 +12,10 @@ export const PostContent = ({ post }: PostContentProps) => {
   const imagePath = `/images/posts/${slug}/${image}`;
 
   const customRenderers = {
-    image({ url, alt }: { url: string; alt: string }) {
+    image({ src, alt }: { src: string; alt: string }) {
       return (
         <Image
-          src={`/images/posts/${slug}/${url}`}
+          src={`/images/posts/${slug}/${src}`}
           alt={alt}
           width={300}
           height={200}
