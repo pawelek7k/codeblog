@@ -9,11 +9,10 @@ interface PostContentProps {
 export const PostContent = ({ post }: PostContentProps) => {
   const { title, image, excerpt, date, slug, content } = post;
   const imagePath = `/images/posts/${slug}/${image}`;
-  console.log(imagePath);
 
   return (
     <article>
-      <PostHeader title={title} image={imagePath} />
+      <PostHeader title={title} image={imagePath} date={date} />
       <ReactMarkdown>{content}</ReactMarkdown>
     </article>
   );
