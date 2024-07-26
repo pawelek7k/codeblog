@@ -14,7 +14,7 @@ export const PostItem = ({ post }: PostProps) => {
   const linkPath = `/posts/${slug}`;
 
   return (
-    <li className="w-[20rem]">
+    <li className="w-[20rem] h-[24rem]">
       <Link href={linkPath}>
         <div>
           <Image
