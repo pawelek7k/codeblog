@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const Hero = () => {
   return (
     <section className="bg-hero-bg bg-fixed bg-center bg-no-repeat bg-cover h-screen flex justify-center items-center">
@@ -7,11 +9,14 @@ export const Hero = () => {
           <li className="bg-secondary w-3 h-3 rounded-full"></li>
           <li className="bg-accent w-3 h-3 rounded-full"></li>
         </ul>
-        <div className="flex flex-col gap-4">
-          <h1 className="text-2xl text-center mt-24 md:text-4xl">
-            Programming blog
-          </h1>
-          <button>See more</button>
+        <div className="flex flex-col gap-4 items-center">
+          <h1 className="text-2xl mt-24 md:text-4xl">Programming blog</h1>
+          <Link
+            href="/posts"
+            className="md:text-base text-sm border-b border-secondary"
+          >
+            See more
+          </Link>
         </div>
       </div>
     </section>

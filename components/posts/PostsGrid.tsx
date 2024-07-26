@@ -7,7 +7,7 @@ interface FeaturedPostsProps {
 
 export const PostsGrid = ({ posts }: FeaturedPostsProps) => {
   return (
-    <ul>
+    <ul className="flex items-center justify-center mt-20 ">
       {posts.map((post) => (
         <PostItem key={post.slug} post={post} />
       ))}

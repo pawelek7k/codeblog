@@ -8,7 +8,7 @@ interface FeaturedPostsProps {
 export const FeaturedPosts = ({ posts }: FeaturedPostsProps) => {
   return (
     <section>
-      <h2>Featured Posts</h2>
+      <h2 className="text-xl mt-24 md:text-3xl text-center">Featured Posts</h2>
       <PostsGrid posts={posts} />
     </section>
   );
