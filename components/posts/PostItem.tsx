@@ -2,7 +2,11 @@ import { PostProps } from "@/types";
 import Image from "next/legacy/image";
 import Link from "next/link";
 
-export const PostItem = ({ post }: PostProps) => {
+interface Props {
+  post: PostProps;
+}
+
+export const PostItem = ({ post }: Props) => {
   const { title, image, excerpt, date, slug } = post;
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     day: "numeric",
