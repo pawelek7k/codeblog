@@ -1,6 +1,7 @@
-import { Db, MongoClient } from 'mongodb';
+import { Db, MongoClient, ObjectId } from 'mongodb';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { z } from 'zod';
+
 
 const messageSchema = z.object({
     email: z.string().email('Invalid email address.'),
@@ -8,12 +9,19 @@ const messageSchema = z.object({
     message: z.string().min(1, 'Message is required.')
 });
 
+interface Message {
+    email: string;
+    name: string;
+    message: string;
+    _id?: ObjectId;
+}
+
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.method === 'POST') {
         try {
             const parsedBody = messageSchema.parse(req.body);
 
-            const newMessage = {
+            const newMessage: Message = {
                 email: parsedBody.email,
                 name: parsedBody.name,
                 message: parsedBody.message
