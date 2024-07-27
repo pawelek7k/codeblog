@@ -1,3 +1,4 @@
+import Notiflix from "notiflix";
 import { useState } from "react";
 
 export const ContactForm = () => {
@@ -36,6 +37,8 @@ export const ContactForm = () => {
         throw new Error("Network response was not ok");
       }
 
+      Notiflix.Notify.success("Your message was successfully sent!");
+
       setFormData({
         email: "",
         name: "",
@@ -44,6 +47,9 @@ export const ContactForm = () => {
       setError(null);
     } catch (error) {
       setError("Failed to send message. Please try again.");
+      Notiflix.Notify.failure(
+        "Failed to send your message. Please try again later."
+      );
     } finally {
       setLoading(false);
     }
