@@ -1,11 +1,20 @@
 import { PostContent } from "@/components/posts/postDetail/PostContent";
 import { getPostData, getPostsFiles } from "@/lib/postsUtil";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
+import Head from "next/head";
 
 type SinglePostPageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
 const SinglePostPage: React.FC<SinglePostPageProps> = (props) => {
-  return <PostContent post={props.post} />;
+  return (
+    <>
+      <Head>
+        <title>{props.post.title}</title>
+        <meta name="description" content={props.post.excerpt} />
+      </Head>
+      <PostContent post={props.post} />
+    </>
+  );
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
