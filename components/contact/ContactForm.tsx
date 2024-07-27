@@ -13,7 +13,12 @@ export const ContactForm = () => {
         </div>
         <div>
           <label htmlFor="message">Email</label>
-          <textarea id="message" required rows="5"></textarea>
+          <textarea
+            id="message"
+            required
+            rows="5"
+            className="resize-none"
+          ></textarea>
           <button>Send Message</button>
         </div>
       </form>
