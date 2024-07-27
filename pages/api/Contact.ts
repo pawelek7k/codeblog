@@ -19,7 +19,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                 message: parsedBody.message
             }
 
-            console.log(newMessage)
 
             res.status(201).json({ message: 'Successfully stored message!', newMessage })
         } catch (e) {
